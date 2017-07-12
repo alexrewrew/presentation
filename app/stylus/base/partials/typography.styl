@@ -1,0 +1,95 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+/* HEADERS */
+
+h1
+  font-weight 100
+  font-size 2.125em
+  //color $white
+h2
+  font-weight 600
+  //color $black
+  text-align center
+  font-size 2.500em
+  padding-bottom 23px
+  margin-bottom 71px
+  position relative
+  +mobile()
+    font-size 1.75em
+  &:after
+    pseudo(block, absolute)
+    width 166px
+    height 4px
+    //background $black
+    bottom 0
+    left calc(50% - 83px)
+
+h2.last
+  //color $purple
+  padding-bottom 0
+  margin-bottom 30px
+  &:after
+    display none
+
+h3
+  font-size 2em
+  font-weight 600
+  letter-spacing 1.8px
+  margin-bottom 26px
+  //color: $black
+  .fa
+    margin-right 25px
+    font-size 26px
+h4
+  //color $purple
+  font-size 2.250em
+  //background $white
+  font-weight 600
+  padding 21px 8.3333333% 26px
+  margin-bottom 67px
+  +mobile()
+    padding-left 15px
+    padding-right 100px
+h5
+  font-size: 2em;
+  letter-spacing: 1.8px;
+  //color: $purple;
+  font-weight 600
+  line-height 1
+  margin-bottom 33px
+  +mobile()
+    margin-left 64px
+
+h6
+  //color: $purple
+  font-size 1.875em
+  font-weight 600
+  margin-bottom 25px
+
+/* PARAGRAPH */
+p
+  font(1em, $black, 300, 1.5)
+  margin-bottom 0
+
+//.white
+//  color $white
+
+.text-hard
+  font-size 1.25em
+
+.text-big
+  font-size 1.5em
+  line-height 1.5
+  margin-bottom 33px
+
+.text-bigger
+  font-size: 1.875em
+  line-height: 1.33;
+
+b
+  font-weight 600
+
+.text-format
+  text-align center
+  margin-bottom 64px

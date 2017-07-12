@@ -1,0 +1,101 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+//main color
+h2.last, h4, h5, h6, .ul-media li span, .ul-movement li, .link-regular, footer .white a:hover, .menu li a span
+  color: $purple
+
+.ul-regular li:before, .ol-format li ul:after, .link-next
+  background $purple
+
+.movement .bubble, .logo:hover svg g, .slider .left-arrow g, .slider .right-arrow g
+  fill $purple
+
+.menu li a:hover, .menu li a.active
+  border-bottom-color $purple
+
+//main color
+
+body
+  background $white
+  color $black
+
+h1
+  color $white
+
+h2
+  color $black
+  &:after
+    background $black
+
+h3
+  color: $black
+
+h4
+  background $white
+
+.white
+  color $white
+
+//
+.ol-format
+  li
+    &:before
+      color $black
+
+//
+.link-next
+  color $white
+  &:hover
+    background $text-gray
+    color $white
+
+//
+header
+  background $black
+
+//
+
+footer
+  background $black
+  .white
+    a
+      color $white
+  p
+    color $text-gray2
+
+//
+.slider-header
+  li
+    color $text-gray
+    border-bottom-color $trans
+  .active
+    color $black
+    border-bottom-color $black
+
+.slider
+  .left-arrow
+    &:hover
+      g
+        fill $black
+  .right-arrow
+    &:hover
+      g
+        fill $black
+
+//
+nav
+  background $trans
+  +mobile()
+    background $black
+
+.nav-panel
+  +mobile()
+    background $black
+
+.menu li a
+      border-bottom-color $trans
+      color $white
+
+.nav-icon span
+    background $white

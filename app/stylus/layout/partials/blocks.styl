@@ -1,0 +1,98 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+/* SECTIONS AND ARTICLES */
+section
+  padding 115px 0 121px
+  p
+    &:last-child
+      margin-bottom 0
+  +mobile()
+    padding 60px 0 70px
+
+
+.section-gray
+  background $back-gray
+
+.section-white
+  background $white
+
+.section-black
+  background $black
+
+.section-double
+  padding-bottom 0
+  h2
+    margin-bottom 41px
+  .section-black
+    min-height 468px
+    .container
+      height 468px
+      .row
+        height 100%
+  .section-gray
+    +mobile()
+      overflow hidden
+
+.section-king
+  padding-bottom 0
+  h2
+    margin-bottom 118px
+  h3
+    color $purple
+    font-weight 600
+    font-size: 5em;
+    line-height: 1.06;
+    position relative
+    top -15px
+    margin-bottom 1px
+    +mobile()
+      font-size 4em
+      z-index 2
+      position: relative
+      margin-bottom 40px
+    +landscape()
+      margin-bottom 1px
+      z-index 1
+  .section-gray
+    padding-bottom 44px
+
+article {}
+
+aside {}
+
+main
+  background $white
+  transitions()
+  +mobile()
+    position relative
+    z-index 100
+
+.container
+  +displays()
+    width 1170px
+
+.spacer-40
+  width 100%
+  height 40px
+.spacer-50
+  width 100%
+  height 50px
+.spacer-30
+  width 100%
+  height 30px
+.spacer-100
+  width 100%
+  height 100px
+.spacer-slider
+  width 100%
+  +mobile()
+    height 65px
+.margin-bottom-71
+  margin-bottom 71px
+
+.z-index-2
+  z-index 2
+  +mobile()
+    padding 50px 15px
+

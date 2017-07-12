@@ -1,0 +1,59 @@
+@import "../../utilities/vars"
+@import "../../utilities/mixins"
+
+/* LINKS */
+a
+  text-decoration none
+  transitions()
+  &:hover
+    text-decoration none
+  &:focus
+    text-decoration none
+
+.link-up
+  position fixed
+  right 15px
+  bottom 15px
+  width 30px
+  height 30px
+  display flex
+  justify-content center
+  align-items center
+  opacity 0
+
+.link-up.visible
+  opacity 1
+
+.link-regular
+  text-decoration underline
+  //color: $purple
+  margin-bottom 10px
+  display inline-block
+
+.link-next
+  display block
+  //background $purple
+  //color $white
+  font-size 1.125em
+  padding 19px 55px 16px
+  position relative
+  max-width 360px
+  width 100%
+  font-weight 300
+  letter-spacing: 1px;
+  margin 0 auto
+  +mobile()
+    padding 19px 70px 20px 30px;
+  //&:hover
+  //  background $text-gray
+  //  color $white
+  img
+    position absolute
+    right 26px
+    top 17px
+    width 40px
+    margin 0
+    +mobile()
+      top 19px
+
+

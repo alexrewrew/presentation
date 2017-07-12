@@ -1,0 +1,73 @@
+.slider-header
+  display flex
+  flex-direction row
+  flex-wrap nowrap
+  justify-content center
+  +mobile()
+    flex-direction column
+  li
+    font-size 2em
+    color $text-gray
+    letter-spacing: 1.8px;
+    margin 0 22px
+    padding-bottom 12px
+    border-bottom 4px solid $trans
+    +mobile()
+      margin-bottom 20px
+  .active
+    color $black
+    border-bottom-color $black
+
+.slider
+  position relative
+  min-height 377px
+  .slick-arrow
+    position absolute
+    bottom 0
+    font-size: 40px
+    text-align center
+    width 52px
+    height 32px
+    z-index 20
+    cursor pointer
+    padding-top 8px
+    transitions()
+    &:hover
+      box-shadow none
+  .left-arrow
+    left 25.3%
+    +mobile()
+      left 15%
+    g
+      transitions()
+      fill $purple
+    &:hover
+      g
+        fill $black
+  .right-arrow
+    left 31.3%
+    +portrait()
+      left 35.3%
+    g
+      fill $purple
+      transitions()
+    &:hover
+      g
+        fill $black
+
+.slider-big
+  position relative
+  .slick-arrow
+    bottom auto
+    top 25px
+    left auto
+  .left-arrow
+    right 13.5%
+    +portrait()
+      right 15.5%
+    +mobile()
+      right 20%
+  .right-arrow
+    right 5.75%
+    +mobile()
+      right 2%

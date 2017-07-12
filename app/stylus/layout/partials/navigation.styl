@@ -1,0 +1,126 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+/* NAVIGATION */
+nav
+  background $trans
+  position relative
+  z-index 10
+  padding 39px 0 32px
+  transitions()
+  +mobile()
+    position fixed
+    top 0
+    left 0
+    right 0
+    z-index 200
+    padding 0
+    background $black
+  +landscape()
+    .container
+      width 100%
+
+.logo
+  display block
+  +mobile()
+    margin 14px 0
+  svg g
+    transitions()
+  &:hover
+    svg g
+      fill $purple
+
+.nav-panel
+  +mobile()
+    background $black
+    height 100vh
+    display none
+    overflow-y scroll
+    padding-top 51px
+    width: calc(100% - 60px);
+
+.nav-mobile
+  display none
+  +mobile()
+    display block
+
+nav.fixed
+  position fixed
+  top 0
+  left 0
+  right 0
+  z-index 100
+
+.menu
+  display flex
+  justify-content flex-end
+  flex-direction row
+  flex-wrap nowrap
+  +mobile()
+    flex-direction column
+  li
+    margin 0 15px 0 23px
+    a
+      display block
+      font-size 1.125em
+      letter-spacing: 1.1px;
+      padding-bottom 5px
+      line-height: 1.22;
+      border-bottom 2px solid $trans
+      color $white
+      +mobile()
+        margin-bottom 15px
+      span
+        margin-right 5px
+        color $purple
+      &:hover
+        border-bottom-color $purple
+      &.active
+        border-bottom-color $purple
+
+/* BURGER ICON */
+
+.nav-icon
+  width 30px
+  height 22px
+  position relative
+  margin 14px 0
+  cursor pointer
+  transitions()
+  transform rotate(0deg)
+  float right
+  span
+    display block
+    position absolute
+    height 3px
+    width 100%
+    background $white
+    border-radius 2px
+    opacity 1
+    left 0
+    transform rotate(0deg)
+    transitions()
+    &:nth-child(1)
+      top 0px
+    &:nth-child(2), &:nth-child(3)
+      top 9px
+    &:nth-child(4)
+      top 18px
+
+.nav-icon.open
+  span
+    &:nth-child(1)
+      top 18px
+      width 0%
+      left 50%
+    &:nth-child(2)
+      transform rotate(45deg)
+    &:nth-child(3)
+      transform rotate(-45deg)
+    &:nth-child(4)
+      top 18px
+      width 0%
+      left 50%
+
+//@import "../libs/rew-downnav/downnav.styl"
+@import "../libs/rew-sidenav/sidenav.styl"

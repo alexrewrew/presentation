@@ -1,0 +1,42 @@
+@import "../../utilities/vars"
+@import "../../utilities/mixins"
+
+/* FOOTER */
+footer
+  //background $black
+  padding-top 38px
+  .white
+    a
+      //color $white
+      text-decoration underline
+      //&:hover
+      //  color $purple
+      &:first-child
+        text-decoration none
+  p
+    //color $text-gray2
+    line-height 1.63
+    font-size .875em
+    margin-right 10px
+    +mobile()
+      margin-right 0
+      margin-bottom 35px
+
+.copyright
+  font-weight 400
+  font-size .75em
+  margin-bottom 28px
+  +portrait()
+    float right
+
+.footer-nav
+  padding-bottom 27px
+  +mobile()
+    .menu
+      li
+        margin-left 0
+        margin-right 0
+        a
+          font-size 1em
+    .logo
+      margin-top 0

@@ -1,0 +1,149 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+.evod
+  margin-bottom 113px
+
+.border-evod
+  border 4px solid $purple
+  margin-left 34px
+  padding 31px 35px 45px 60px
+  position relative
+  margin-bottom 35px
+  +mobile()
+    margin-left 0
+  p
+    line-height 1.38
+    margin-bottom 0
+  &:before
+    pseudo(block, absolute)
+    counter-increment: evod;
+    content: counter(evod)
+    left: -22px;
+    top: 19px;
+    color $black
+    letter-spacing: 1.8px;
+    font-weight 600
+    font-size 5em
+
+.evod-idea
+  padding 36px 55px 45px 98px
+  +portrait()
+    padding-right 35px
+  +mobile()
+    padding-left 64px
+    padding-right 35px
+
+  p
+    line-height: 1.38;
+
+.text-standarts
+  position absolute
+  width 100%
+  max-width 320px
+  p
+    line-height: 1.38;
+    b
+      display block
+      font-size 1.25em
+      line-height: 1.1;
+
+.ts-1
+  top 0
+  left 15px
+  bottom 0
+  right 0
+.ts-2
+  top 0
+  right -42px
+.ts-3
+  left 15px
+  bottom 167px
+.ts-4
+  top 133px
+  right -42px
+
+.border-king
+  border 4px solid $purple
+  padding-left calc(50% + 10px)
+  min-height 152px
+  padding-right 22px
+  display flex
+  align-items center
+  margin-bottom 88px
+  position relative
+  +mobile()
+    padding 15px
+    z-index 1
+  p
+    font-weight 600
+    letter-spacing: 1px;
+    font-size 1.125em
+    line-height 1.3
+    +mobile()
+      position relative
+      z-index 2
+
+.king-paragraph
+  p
+    line-height 1.38
+    margin-bottom 22px
+    b
+      font-size 1.125em
+
+.text-img
+  p
+    line-height: 1.5;
+    margin-bottom 22px
+    b
+      font-size 1.125em
+
+.icons-format
+  display flex
+  flex-direction row
+  background $back-gray
+  padding 38px 65px 20px 96px
+  flex-wrap wrap
+  +mobile()
+    flex-wrap wrap
+    padding-left 30px
+    padding-right 30px
+  +landscape()
+    padding 38px 65px 20px
+  .icon-image
+    flex 1 1 10%
+    max-width 10%
+    margin-bottom 20px
+    +mobile()
+      flex 1 1 20%
+      max-width 20%
+    +landscape()
+      flex 1 1 10%
+      max-width 10%
+    img
+      margin 0
+  .icon-description
+    flex 1 1 40%
+    max-width 40%
+    margin-bottom 20px
+    +mobile()
+      flex 1 1 80%
+      max-width 80%
+    +landscape()
+      flex 1 1 40%
+      max-width 40%
+      margin-bottom 20px
+
+.central
+  text-align center
+  p
+    margin-bottom 30px
+
+.message
+  p
+    color $purple
+    font-weight 600
+    font-size 1.5em
+    +mobile()
+      font-size 1.25em
+

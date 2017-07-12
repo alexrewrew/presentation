@@ -1,0 +1,131 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+ul
+  padding 0
+  li
+    list-style none
+
+ol
+  padding 0
+  margin 0
+  li {}
+
+.ul-regular
+  margin 48px 0 76px
+  li
+    position relative
+    font-weight 300
+    line-height: 1.38
+    padding-left 32px
+    margin-bottom 22px
+    &:before
+      pseudo(block, absolute)
+      border-radius 50%
+      //background $purple
+      width: 8px;
+      height: 8px;
+      top 8px
+      left 0
+
+.format-reset
+  counter-reset: format;
+
+.ol-format
+  margin 64px 0 49px
+  display flex
+  flex-direction column
+  flex-wrap nowrap
+  +mobile()
+    margin 0
+  li
+    list-style none
+    position relative
+    display inline-block
+    width auto
+    margin-bottom 5px
+    &:before
+      pseudo(block, absolute)
+      counter-increment: format;
+      content: counter(format)
+      left: 15px;
+      top: -2px;
+      //color $black
+      letter-spacing: 1.8px;
+      font-weight 600
+      font-size 2.188em
+      z-index 3
+    p
+      padding-left 45px
+    ul
+      padding-left 45px
+      display inline-block
+      position relative
+      &:after
+        pseudo(block, absolute)
+        width 100%
+        height 3px
+        //background $purple
+        top 3px
+        left 0
+      li
+        max-width unset
+        flex none
+        &:before
+          display none
+        img
+          margin 17px 30px 17px 0
+          +portrait()
+            margin-right 25px
+
+.ul-media
+  display flex
+  flex-wrap nowrap
+  flex-direction row
+  justify-content space-between
+  padding 0 27px
+  margin-bottom 44px
+  +portrait()
+    padding 0
+  +mobile()
+    padding 0
+    flex-wrap wrap
+    justify-content flex-start
+  li
+    font-size 1.25em
+    font-weight 600
+    +mobile()
+      flex 1 1 33.33333333%
+      max-width 33.33333333%
+    +landscape()
+      flex 1 1 20%
+      max-width 20%
+    span
+      //color $purple
+      font-size 28px
+      margin-right 7px
+
+
+.ul-movement
+  display flex
+  flex-direction row
+  flex-wrap nowrap
+  padding 0 60px
+  margin-bottom 75px
+  +tablet()
+    padding 0 40px
+  +portrait()
+    padding 0 10px
+  +mobile()
+    padding 0
+  +landscape()
+    padding 0 60px
+  li
+    //color $purple
+    text-align left
+    &:first-child
+      max-width 25%
+      flex 1 1 25%
+    &:nth-child(2)
+      max-width 45%
+      flex 1 1 45%
