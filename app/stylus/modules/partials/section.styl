@@ -3,6 +3,11 @@
 
 .evod
   margin-bottom 113px
+  &:last-child
+    margin-bottom 0
+
+.evod-reset
+  counter-reset evod
 
 .border-evod
   border 4px solid $purple
@@ -43,7 +48,7 @@
   max-width 320px
   p
     line-height: 1.38;
-    b
+    b, strong
       display block
       font-size 1.25em
       line-height: 1.1;
@@ -88,14 +93,14 @@
   p
     line-height 1.38
     margin-bottom 22px
-    b
+    b, strong
       font-size 1.125em
 
 .text-img
   p
     line-height: 1.5;
     margin-bottom 22px
-    b
+    b, strong
       font-size 1.125em
 
 .icons-format

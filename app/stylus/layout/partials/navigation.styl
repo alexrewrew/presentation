@@ -2,12 +2,20 @@
 @import '../../utilities/mixins'
 
 /* NAVIGATION */
+
+.menu-reset1
+  counter-reset navi1
+
+.menu-reset2
+  counter-reset navi2
+
 nav
   background $trans
   position relative
   z-index 10
   padding 39px 0 32px
   transitions()
+
   +mobile()
     position fixed
     top 0
@@ -59,7 +67,9 @@ nav.fixed
   +mobile()
     flex-direction column
   li
-    margin 0 15px 0 23px
+    margin: 0 16px 0;
+    &:last-child
+      margin-right 0
     a
       display block
       font-size 1.125em
@@ -68,16 +78,31 @@ nav.fixed
       line-height: 1.22;
       border-bottom 2px solid $trans
       color $white
+      position relative
+      padding-left 15px
       +mobile()
         margin-bottom 15px
-      span
-        margin-right 5px
+      &:before
+        pseudo(block, absolute)
+        top 0
+        left 0
+        counter-increment: navi1;
+        content: counter(navi1)
         color $purple
+        font-weight 600
+      //span
+      //  margin-right 5px
+      //  color $purple
       &:hover
         border-bottom-color $purple
       &.active
         border-bottom-color $purple
 
+.menu.menu-footer
+  li
+    a:before
+      counter-increment: navi2;
+      content: counter(navi2)
 /* BURGER ICON */
 
 .nav-icon
