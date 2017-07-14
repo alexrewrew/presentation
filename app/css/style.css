@@ -8605,7 +8605,7 @@ img {
 		font-size: 1.25em;
 	}
 }
-h2.last, h4, h5, h6, .ul-media li span, .ul-movement li, .link-regular, footer .white a:hover, .menu li a span {
+h2.last, h4, h5, h6, .ul-media li span, .ul-movement li, .link-regular, footer .white a:hover, .menu li a:before, .section-king h3, .message p {
 	color: #7521e1;
 }
 .ul-regular li:before, .ol-format li ul:after, .link-next {
@@ -8614,8 +8614,8 @@ h2.last, h4, h5, h6, .ul-media li span, .ul-movement li, .link-regular, footer .
 .movement .bubble, .logo:hover svg g, .slider .left-arrow g, .slider .right-arrow g {
 	fill: #7521e1;
 }
-.menu li a:hover, .menu li a.active {
-	border-bottom-color: #7521e1;
+.menu li a:hover, .menu li a.active, .border-king, .border-evod {
+	border-color: #7521e1;
 }
 body {
 	background: #fff;
