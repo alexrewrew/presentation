@@ -7773,8 +7773,8 @@ header {
 	margin-bottom: 70px;
 }
 .jumbo {
-	height: -webkit-calc(660px - 113px);
-	height:         calc(660px - 113px);
+	height: -webkit-calc(660px - 115px);
+	height:         calc(660px - 115px);
 	position: relative;
 	z-index: 10;
 }
@@ -7825,7 +7825,7 @@ nav {
 	}
 }
 .logo {
-	display: block;
+	display: inline-block;
 }
 @media (max-width: 767px) {
 	.logo {
@@ -8491,7 +8491,7 @@ img {
 }
 .king-paragraph p {
 	line-height: 1.38;
-	margin-bottom: 22px;
+	margin-bottom: 22px !important;
 }
 .king-paragraph p b, .king-paragraph p strong {
 	font-size: 1.125em;
@@ -8605,17 +8605,43 @@ img {
 		font-size: 1.25em;
 	}
 }
-h2.last, h4, h5, h6, .ul-media li span, .ul-movement li, .link-regular, footer .white a:hover, .menu li a:before, .section-king h3, .message p {
+h2.last, h4, h5, h6, .ul-media li span, .ul-movement li, .link-regular, footer .white a:hover, .section-king h3, .message p {
 	color: #7521e1;
 }
 .ul-regular li:before, .ol-format li ul:after, .link-next {
 	background: #7521e1;
 }
-.movement .bubble, .logo:hover svg g, .slider .left-arrow g, .slider .right-arrow g {
+.movement .bubble, .slider .left-arrow g, .slider .right-arrow g {
 	fill: #7521e1;
 }
-.menu li a:hover, .menu li a.active, .border-king, .border-evod {
+.border-king, .border-evod {
 	border-color: #7521e1;
+}
+.menu li a:before {
+	color: #7521e1;
+}
+.menu li a:hover, .menu li a.active {
+	border-color: #7521e1;
+}
+.logo svg g {
+	fill: #fff;
+}
+.logo:hover svg g {
+	fill: #7521e1;
+}
+h2 {
+	color: #000;
+}
+h2:after {
+	background: #000;
+}
+.slider-header li {
+	color: #c2c2c2;
+	border-bottom-color: transparent;
+}
+.slider-header .active {
+	color: #000;
+	border-bottom-color: #000;
 }
 body {
 	background: #fff;
@@ -8623,12 +8649,6 @@ body {
 }
 h1 {
 	color: #fff;
-}
-h2 {
-	color: #000;
-}
-h2:after {
-	background: #000;
 }
 h3 {
 	color: #000;
@@ -8660,14 +8680,6 @@ footer .white a {
 }
 footer p {
 	color: #979797;
-}
-.slider-header li {
-	color: #c2c2c2;
-	border-bottom-color: transparent;
-}
-.slider-header .active {
-	color: #000;
-	border-bottom-color: #000;
 }
 .slider .left-arrow:hover g {
 	fill: #000;

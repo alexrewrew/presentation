@@ -4,17 +4,46 @@
 /* !!! COLORS !!! */
 
 //main color
-h2.last, h4, h5, h6, .ul-media li span, .ul-movement li, .link-regular, footer .white a:hover, .menu li a:before, .section-king h3, .message p
+h2.last, h4, h5, h6, .ul-media li span, .ul-movement li, .link-regular, footer .white a:hover,  .section-king h3, .message p
   color: $purple
 
 .ul-regular li:before, .ol-format li ul:after, .link-next
   background $purple
 
-.movement .bubble, .logo:hover svg g, .slider .left-arrow g, .slider .right-arrow g
+.movement .bubble, .slider .left-arrow g, .slider .right-arrow g
   fill $purple
 
-.menu li a:hover, .menu li a.active, .border-king, .border-evod
+.border-king, .border-evod
   border-color $purple
+
+//
+
+.menu li a:before
+  color $purple
+
+.menu li a:hover, .menu li a.active
+  border-color $purple
+
+.logo svg g
+  fill $white
+
+.logo:hover svg g
+  fill $purple
+
+h2
+  color $black
+  &:after
+    background $black
+
+.slider-header
+  li
+    color $text-gray
+    border-bottom-color $trans
+  .active
+    color $black
+    border-bottom-color $black
+
+//
 
 //main color
 
@@ -25,10 +54,7 @@ body
 h1
   color $white
 
-h2
-  color $black
-  &:after
-    background $black
+
 
 h3
   color: $black
@@ -67,13 +93,7 @@ footer
     color $text-gray2
 
 //
-.slider-header
-  li
-    color $text-gray
-    border-bottom-color $trans
-  .active
-    color $black
-    border-bottom-color $black
+
 
 .slider
   .left-arrow
