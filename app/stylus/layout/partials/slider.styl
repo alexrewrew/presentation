@@ -71,3 +71,16 @@
     right 5.75%
     +mobile()
       right 2%
+  &:after
+    pseudo(block, absolute)
+    width 270px
+    height 90px
+    background linear-gradient(to right, rgba(#fff,0) 0%,rgba(#fff,1) 30%);
+    top 0
+    right 0
+    +mobile()
+      width 110px
+    +tablet()
+      width 240px
+    +portrait()
+      width 200px

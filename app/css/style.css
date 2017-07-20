@@ -8368,6 +8368,33 @@ img {
 		right: 2%;
 	}
 }
+.slider-big:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 270px;
+	height: 90px;
+	background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)), color-stop(30%, #fff));
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 30%);
+	background:         linear-gradient(to right, rgba(255,255,255,0) 0%, #fff 30%);
+	top: 0;
+	right: 0;
+}
+@media (max-width: 767px) {
+	.slider-big:after {
+		width: 110px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.slider-big:after {
+		width: 240px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.slider-big:after {
+		width: 200px;
+	}
+}
 .evod {
 	margin-bottom: 113px;
 }
@@ -8623,6 +8650,9 @@ h2.last, h4, h5, h6, .ul-media li span, .ul-movement li, .link-regular, footer .
 .menu li a:hover, .menu li a.active {
 	border-color: #7521e1;
 }
+footer .menu li a:hover {
+	border-color: #000;
+}
 .logo svg g {
 	fill: #fff;
 }
@@ -8642,6 +8672,11 @@ h2:after {
 .slider-header .active {
 	color: #000;
 	border-bottom-color: #000;
+}
+.slider-big:after {
+	background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)), color-stop(40%, #fff));
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 40%);
+	background:         linear-gradient(to right, rgba(255,255,255,0) 0%, #fff 40%);
 }
 body {
 	background: #fff;
@@ -8664,6 +8699,7 @@ h4 {
 }
 .link-next {
 	color: #fff;
+	background: #000;
 }
 .link-next:hover {
 	background: #c2c2c2;

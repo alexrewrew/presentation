@@ -24,6 +24,9 @@ h2.last, h4, h5, h6, .ul-media li span, .ul-movement li, .link-regular, footer .
 .menu li a:hover, .menu li a.active
   border-color $purple
 
+footer .menu li a:hover
+  border-color: black;
+
 .logo svg g
   fill $white
 
@@ -45,6 +48,9 @@ h2
 
 //
 
+.slider-big:after
+  background linear-gradient(to right, rgba(#fff,0) 0%,rgba(#fff,1) 40%);
+
 //main color
 
 body
@@ -53,8 +59,6 @@ body
 
 h1
   color $white
-
-
 
 h3
   color: $black
@@ -74,6 +78,7 @@ h4
 //
 .link-next
   color $white
+  background $black
   &:hover
     background $text-gray
     color $white
